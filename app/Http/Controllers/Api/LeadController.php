@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\LeadResource;
 use App\Models\Lead;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -11,7 +12,7 @@ class LeadController extends Controller
 {
     public function index()
     {
-        return Lead::get();
+        return LeadResource::collection(Lead::get());
     }
 
     public function create()
@@ -39,7 +40,7 @@ class LeadController extends Controller
 
     public function show(Lead $lead)
     {
-        return $lead;
+        return new LeadResource($lead);
     }
 
     public function update(Request $request, Lead $lead)

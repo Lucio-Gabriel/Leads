@@ -1,0 +1,8 @@
+🔹 Ideias de Projetos Laravel API + n8n
+1. Gerador de Leads (Cadastro de Contatos)
+
+Laravel: API para cadastro de leads (nome, e-mail, telefone).
+
+n8n: Quando um novo lead é cadastrado, o n8n pega da API e envia para o Google Sheets.
+
+Pode também mandar notificação no Telegram / WhatsApp / E-mail.
