@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 Route::get('/leads', [App\Http\Controllers\Api\LeadController::class, 'index']);
-Route::post('/leads', [App\Http\Controllers\Api\LeadController::class, 'create']);
+Route::post('/leads', [App\Http\Controllers\Api\LeadController::class, 'store']);
 Route::get('/leads/{lead}', [App\Http\Controllers\Api\LeadController::class, 'show']);
 Route::put('/leads/{lead}', [App\Http\Controllers\Api\LeadController::class, 'update']);
 Route::delete('/leads/{lead}', [App\Http\Controllers\Api\LeadController::class, 'destroy']);

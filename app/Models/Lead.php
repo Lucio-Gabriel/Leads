@@ -16,4 +16,9 @@ class Lead extends Model
         'status',
         'registration_date',
     ];
+
+    protected $casts = [
+        // 'registration_date' => 'datetime',
+        'status' => \App\StatusEnum::class,
+    ];
 }
